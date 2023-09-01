@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'air';
+    src: url('../fonts/AirbnbCereal_W_Bk.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'eksell';
+    src: url('../fonts/Eksell\ Display\ Medium.otf');
+    font-weight: 400;
+}

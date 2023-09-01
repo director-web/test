@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripGoal</title>
+  <!-- BOOTSTRAP 5 -->
+  <link rel="stylesheet" href="css/bootstrap5.css">
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/card.css">
+
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      <div class="loader">
+        <svg class="pl" viewBox="0 0 160 160" width="160px" height="160px" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#000"></stop>
+              <stop offset="100%" stop-color="#fff"></stop>
+            </linearGradient>
+            <mask id="mask1">
+              <rect x="0" y="0" width="160" height="160" fill="url(#grad)"></rect>
+            </mask>
+            <mask id="mask2">
+              <rect x="28" y="28" width="104" height="104" fill="url(#grad)"></rect>
+            </mask>
+          </defs>
+
+          <g>
+            <g class="pl__ring-rotate">
+              <circle class="pl__ring-stroke" cx="80" cy="80" r="72" fill="none" stroke="hsl(223,90%,55%)"
+                stroke-width="16" stroke-dasharray="452.39 452.39" stroke-dashoffset="452" stroke-linecap="round"
+                transform="rotate(-45,80,80)"></circle>
+            </g>
+          </g>
+          <g mask="url(#mask1)">
+            <g class="pl__ring-rotate">
+              <circle class="pl__ring-stroke" cx="80" cy="80" r="72" fill="none" stroke="hsl(193,90%,55%)"
+                stroke-width="16" stroke-dasharray="452.39 452.39" stroke-dashoffset="452" stroke-linecap="round"
+                transform="rotate(-45,80,80)"></circle>
+            </g>
+          </g>
+
+          <g>
+            <g stroke-width="4" stroke-dasharray="12 12" stroke-dashoffset="12" stroke-linecap="round"
+              transform="translate(80,80)">
+              <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14"
+                transform="rotate(-135,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14"
+                transform="rotate(-90,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14"
+                transform="rotate(-45,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14"
+                transform="rotate(0,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14"
+                transform="rotate(45,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14"
+                transform="rotate(90,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14"
+                transform="rotate(135,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,10%,90%)" points="0,2 0,14"
+                transform="rotate(180,0,0) translate(0,40)"></polyline>
+            </g>
+          </g>
+          <g mask="url(#mask1)">
+            <g stroke-width="4" stroke-dasharray="12 12" stroke-dashoffset="12" stroke-linecap="round"
+              transform="translate(80,80)">
+              <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14"
+                transform="rotate(-135,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14"
+                transform="rotate(-90,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14"
+                transform="rotate(-45,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14"
+                transform="rotate(0,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14"
+                transform="rotate(45,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14"
+                transform="rotate(90,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14"
+                transform="rotate(135,0,0) translate(0,40)"></polyline>
+              <polyline class="pl__tick" stroke="hsl(223,90%,80%)" points="0,2 0,14"
+                transform="rotate(180,0,0) translate(0,40)"></polyline>
+            </g>
+          </g>
+
+          <g>
+            <g transform="translate(64,28)">
+              <g class="pl__arrows" transform="rotate(45,16,52)">
+                <path fill="hsl(3,90%,55%)"
+                  d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z">
+                </path>
+                <path fill="hsl(223,10%,90%)"
+                  d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z">
+                </path>
+              </g>
+            </g>
+          </g>
+          <g mask="url(#mask2)">
+            <g transform="translate(64,28)">
+              <g class="pl__arrows" transform="rotate(45,16,52)">
+                <path fill="hsl(333,90%,55%)"
+                  d="M17.998,1.506l13.892,43.594c.455,1.426-.56,2.899-1.998,2.899H2.108c-1.437,0-2.452-1.473-1.998-2.899L14.002,1.506c.64-2.008,3.356-2.008,3.996,0Z">
+                </path>
+                <path fill="hsl(223,90%,80%)"
+                  d="M14.009,102.499L.109,58.889c-.453-1.421,.559-2.889,1.991-2.889H29.899c1.433,0,2.444,1.468,1.991,2.889l-13.899,43.61c-.638,2.001-3.345,2.001-3.983,0Z">
+                </path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <header>
+        <nav>
+          <div class="nav__content">
+            <a href="" class="logo text-decoration-none"><span><img src="img/Logo.png" alt=""></span></a>
+
+            <ul class="nav__bar list-unstyled">
+              <li class="nav__link1"><a href="#" class="active text-decoration-none">Home</a></li>
+              <li class="nav__link2"><a href="#" class="text-decoration-none">About</a></li>
+              <li class="nav__link3"><a href="#" class="text-decoration-none">Packages</a></li>
+              <li class="nav__link4"><a href="#" class="text-decoration-none">Contact Us</a></li>
+              <li class="nav__link5"><a href="#" class="text-decoration-none">FAQ</a></li>
+            </ul>
+
+            <div class="nav__register">
+              <a href="#">
+                <button>Register</button>
+              </a>
+
+              <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+
+        <section class="trip">
+          <div class="container">
+            <div class="hero-section">
+              <div class="trip__header d-flex align-items-center">
+
+                <!-- ROW -->
+                <div class="row trip__parrent">
+
+                  <!-- COL 1 -->
+                  <div class="col trip__child">
+                    <div class="trip__content">
+
+                      <!-- HEADER IMG 1 -->
+                      <div class="trip__img-block" data-lag=".2">
+                        <div class="trip__teaser teaser-block">
+                          <article class="weather-teaser__web">
+                            <div class="trip__img-1">
+
+                              <img src="img/header-img1.png" class="image-style-teaser-work">
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                      <!-- HEADER IMG 1 -->
+
+                      <!-- HEADER IMG 2 -->
+                      <div class="trip__img-block2" data-speed=".8">
+                        <div class="trip__teaser teaser-block2">
+                          <article class="weather-teaser__web">
+                            <div class="trip__img-1">
+
+                              <img src="img/header-img2.png" class="image-style-teaser-work">
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                      <!-- HEADER IMG 2 -->
+                    </div>
+                  </div>
+                  <!-- COL 1 -->
+
+
+                  <!-- COL 2 -->
+                  <div class="col d-flex ">
+                    <div class="d-flex flex-column justify-content-center">
+                      <h4 class="trip__text-start text-success">Book Now</h4>
+
+                      <h1 class="trip__title mt-3">Let’s Enjoy Your Trip with TripGoal<img src="img/rocket.png"
+                          class="ms-3 mb-3" alt=""></h1>
+
+                      <p class="trip__text mt-3 fs-5">
+                        Thinking of taking a break from every day's busy life? Planning to go out of
+                        the
+                        country
+                        with your loved ones to have some fun and quality time in a cost-effective
+                        way?
+                      </p>
+
+                      <div class="trip__btn-parrent">
+                        <button class="trip__btn mt-3 fs-5">Start Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- COL 2 -->
+
+                </div>
+                <!-- ROW -->
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="book">
+          <div class="container">
+            <div class="book__content d-flex justify-content-center align-items-center">
+              <form class="book__form">
+                <select>
+                  <option value="1">Location</option>
+                  <option value="2">America</option>
+                  <option value="3">Paris</option>
+                  <option value="3">Tashkent</option>
+                </select>
+                <select>
+                  <option value="1">Your Category</option>
+                  <option value="2">Business</option>
+                  <option value="3">Econom</option>
+                  <option value="3">Lux</option>
+                </select>
+                <select>
+                  <option value="1">Total Person</option>
+                  <option value="2">1</option>
+                  <option value="3">2</option>
+                  <option value="3">3</option>
+                </select>
+
+                <button class="text-white fs-5"><i class="fa-regular fa-calendar-days"></i> Book
+                  Now</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="instruction mb-5">
+          <div class="container">
+            <div class="instruction__text">
+              <h4 class="text-success text-center gs_reveal">3 steps for the perfect trip</h4>
+
+              <h1 class="text-center mt-4 box gs_reveal">Find travel perfection</h1>
+
+              <div class="d-flex justify-content-center align-items-center mt-4 gs_reveal">
+                <p class="text-center box">Naturally head of the class whenit comes to luxury travel
+                  planning,bbecause we do more homework than anyone else</p>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col instruction__block gs_reveal gs_reveal_fromLeft">
+                  <div class="instruction__card wallet">
+                    <div class="instruction__overlay"></div>
+
+                    <div class="circle">
+                      <img src="img/chat.png" alt="">
+                    </div>
+
+                    <h5 class="text-center">Tell us what you want to do</h5>
+                    <p class="text-center">Fill out a 2-minute questionnaire <br> about how you like
+                      to travel</p>
+                  </div>
+                </div>
+
+                <div class="col instruction__block box gs_reveal">
+                  <div class="instruction__card2 wallet">
+                    <div class="instruction__overlay2"></div>
+
+                    <div class="circle2">
+                      <img src="img/calendar.png" alt="">
+                    </div>
+
+                    <h5 class="text-center">Tell us what you want to do</h5>
+                    <p class="text-center">Fill out a 2-minute questionnaire <br> about how you like
+                      to travel</p>
+                  </div>
+                </div>
+
+                <div class="col instruction__block box3 gs_reveal gs_reveal_fromRight">
+                  <div class="instruction__card3 wallet">
+                    <div class="instruction__overlay3"></div>
+
+                    <div class="circle3">
+                      <img src="img/star.png" alt="">
+                    </div>
+
+                    <h5 class="text-center">Tell us what you want to do</h5>
+                    <p class="text-center">Fill out a 2-minute questionnaire <br> about how you like
+                      to travel</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="product-slider">
+          <div class="container">
+            <!--==heading====================-->
+
+            <!--btns=========================-->
+            <div class="carousel__btn d-flex justify-content-between mb-5">
+              <div class="slider__text">
+                <h5>Location</h5>
+                <h1 class="mt-3 mb-3">Suggested Location</h1>
+                <p>Travel is my life. Since 1999, I’ve been traveling around the world nonstop. If you also love travel,
+                  you’re in the right place!
+                </p>
+              </div>
+
+              <div class="slider-btns">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+
+            </div>
+            <div class="slider-container">
+              <!-- Swiper -->
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <!--1================================-->
+                  <div class="swiper-slide">
+                    <!--box----------------------->
+                    <div class="b__box">
+                      <div class="imgBx">
+                        <img src="img/tour-1.png" alt="">
+                      </div>
+
+                      <div class="b__content">
+                        <div class="d-flex justify-content-between">
+                          <div class="b__title">
+                            <h5>Bali Handara Gate</h5>
+                            <p>Indonesia</p>
+                          </div>
+
+                          <div class="b__title2 d-flex flex-column justify-content-between align-items-end">
+                            <div>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>$1200</p>
+                          </div>
+                        </div>
+
+                        <p class="text-white text-center fs-5 mt-2 mb-5">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, ea exercitationem dignissimos
+                          in delectus error! Quos laborum praesentium ad ex magnam eaque reiciendis delectus, aspernatur
+                          omnis quasi nostrum totam sint laboriosam. Amet dicta
+                        </p>
+
+                        <div class="b__btn d-flex justify-content-center align-items-center">
+                          <button>Book</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--2================================-->
+                  <div class="swiper-slide">
+                    <!--box----------------------->
+                    <div class="b__box">
+                      <div class="imgBx">
+                        <img src="img/tour-2.png" alt="">
+                      </div>
+
+                      <div class="b__content">
+                        <div class="d-flex justify-content-between">
+                          <div class="b__title">
+                            <h5>Buddhist shrine</h5>
+                            <p>Tokyo, Japan</p>
+                          </div>
+
+                          <div class="b__title2 d-flex flex-column justify-content-between align-items-end">
+                            <div>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>$1200</p>
+                          </div>
+                        </div>
+
+                        <p class="text-white text-center fs-5 mt-2 mb-5">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, ea exercitationem dignissimos
+                          in delectus error! Quos laborum praesentium ad ex magnam eaque reiciendis delectus, aspernatur
+                          omnis quasi nostrum totam sint laboriosam. Amet dicta
+                        </p>
+
+                        <div class="b__btn d-flex justify-content-center align-items-center">
+                          <button>Book</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--3================================-->
+                  <div class="swiper-slide">
+                    <!--box----------------------->
+                    <div class="b__box">
+                      <div class="imgBx">
+                        <img src="img/tour-3.png" alt="">
+                      </div>
+
+                      <div class="b__content">
+                        <div class="d-flex justify-content-between">
+                          <div class="b__title">
+                            <h5>Rialto Bridge</h5>
+                            <p>Italy</p>
+                          </div>
+
+                          <div class="b__title2 d-flex flex-column justify-content-between align-items-end">
+                            <div>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>$1200</p>
+                          </div>
+                        </div>
+
+                        <p class="text-white text-center fs-5 mt-2 mb-5">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, ea exercitationem dignissimos
+                          in delectus error! Quos laborum praesentium ad ex magnam eaque reiciendis delectus, aspernatur
+                          omnis quasi nostrum totam sint laboriosam. Amet dicta
+                        </p>
+
+                        <div class="b__btn d-flex justify-content-center align-items-center">
+                          <button>Book</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--4================================-->
+                  <div class="swiper-slide">
+                    <!--box----------------------->
+                    <div class="b__box">
+                      <div class="imgBx">
+                        <img src="img/tour-1.png" alt="">
+                      </div>
+
+                      <div class="b__content">
+                        <div class="d-flex justify-content-between">
+                          <div class="b__title">
+                            <h5>Bali Handara Gate</h5>
+                            <p>Indonesia</p>
+                          </div>
+
+                          <div class="b__title2 d-flex flex-column justify-content-between align-items-end">
+                            <div>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>$1200</p>
+                          </div>
+                        </div>
+
+                        <p class="text-white text-center fs-5 mt-2 mb-5">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, ea exercitationem dignissimos
+                          in delectus error! Quos laborum praesentium ad ex magnam eaque reiciendis delectus, aspernatur
+                          omnis quasi nostrum totam sint laboriosam. Amet dicta
+                        </p>
+
+                        <div class="b__btn d-flex justify-content-center align-items-center">
+                          <button>Book</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--5================================-->
+                  <div class="swiper-slide">
+                    <!--box----------------------->
+                    <div class="b__box">
+                      <div class="imgBx">
+                        <img src="img/tour-2.png" alt="">
+                      </div>
+
+                      <div class="b__content">
+                        <div class="d-flex justify-content-between">
+                          <div class="b__title">
+                            <h5>Buddhist shrine</h5>
+                            <p>Tokyo, Japan</p>
+                          </div>
+
+                          <div class="b__title2 d-flex flex-column justify-content-between align-items-end">
+                            <div>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>$1200</p>
+                          </div>
+                        </div>
+
+                        <p class="text-white text-center fs-5 mt-2 mb-5">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, ea exercitationem dignissimos
+                          in delectus error! Quos laborum praesentium ad ex magnam eaque reiciendis delectus, aspernatur
+                          omnis quasi nostrum totam sint laboriosam. Amet dicta
+                        </p>
+
+                        <div class="b__btn d-flex justify-content-center align-items-center">
+                          <button>Book</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--6================================-->
+                  <div class="swiper-slide">
+                    <!--box----------------------->
+                    <div class="b__box">
+                      <div class="imgBx">
+                        <img src="img/tour-3.png" alt="">
+                      </div>
+
+                      <div class="b__content">
+                        <div class="d-flex justify-content-between">
+                          <div class="b__title">
+                            <h5>Rialto Bridge</h5>
+                            <p>Italy</p>
+                          </div>
+
+                          <div class="b__title2 d-flex flex-column justify-content-between align-items-end">
+                            <div>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                              <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>$1200</p>
+                          </div>
+                        </div>
+
+                        <p class="text-white text-center fs-5 mt-2 mb-5">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, ea exercitationem dignissimos
+                          in delectus error! Quos laborum praesentium ad ex magnam eaque reiciendis delectus, aspernatur
+                          omnis quasi nostrum totam sint laboriosam. Amet dicta
+                        </p>
+
+                        <div class="b__btn d-flex justify-content-center align-items-center">
+                          <button>Book</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- JQUERY -->
+  <script src="libs/jquery.js"></script>
+
+  <!-- GSAP -->
+  <script src="libs/gsap.min.js"></script>
+  <script src="libs/ScrollTrigger.min.js"></script>
+  <script src="libs/ScrollSmoother.min.js"></script>
+
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- BOOTSTRAP 5 -->
+  <script src="libs/bootstrap5.js"></script>
+
+  <!-- FONT AWESOME -->
+  <script src="libs/fontawesome.js"></script>
+
+  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+  <!-- CUSTOM JS -->
+  <script src="js/main.js"></script>
+  <script src="js/gsapAnimation.js"></script>
+
+
+</body>
+
+</html>

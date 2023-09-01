@@ -1,0 +1,388 @@
+.wallet {
+    --bg-color: #4169e1;
+    --bg-color2: #008080;
+    --bg-color3: #800000;
+    --bg-color-light: #f0e7ff;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(206, 178, 252, 0.48);
+}
+
+/* instruction card 1 */
+
+.instruction__card {
+    width: 370px;
+    height: 321px;
+    background: #fff;
+    border: 2px solid #bdbdbd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.instruction__card:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+        0 24px 46px var(--box-shadow-color);
+    cursor: pointer;
+}
+
+.instruction__card:hover .instruction__overlay {
+    transform: scale(4) translateZ(0);
+    height: 170px;
+}
+
+.instruction__card:hover .circle {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+}
+
+.instruction__card:hover .circle:after {
+    background: var(--bg-color-light);
+}
+
+.instruction__card:hover p {
+    color: var(--text-color-hover);
+}
+
+.instruction__card:hover h5 {
+    color: var(--text-color-hover) !important;
+}
+
+.instruction__card h5 {
+    color: #002248;
+    font-size: 20px;
+    margin-top: 30px;
+    z-index: 1000;
+    font-family: 'air';
+    font-weight: 400;
+    transition: color 0.3s ease-out;
+}
+
+.instruction__card p {
+    font-size: 17px;
+    color: #4c5656;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+}
+
+.circle {
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circle:after {
+    content: "";
+    width: 118px;
+    height: 118px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 50%;
+    transition: opacity 0.3s ease-out;
+}
+
+.circle img {
+    width: 100px;
+    z-index: 10000;
+    transform: translateZ(0);
+}
+
+.instruction__overlay {
+    width: 118px;
+    position: absolute;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 25px;
+    left: 125px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+/* instruction card 1*/
+
+/* instruction card 2 */
+
+.instruction__card2 {
+    width: 370px;
+    height: 321px;
+    background: #fff;
+    border: 2px solid #bdbdbd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.instruction__card2:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+        0 24px 46px var(--box-shadow-color);
+    cursor: pointer;
+}
+
+.instruction__card2:hover .instruction__overlay2 {
+    transform: scale(4) translateZ(0);
+    height: 170px;
+}
+
+.instruction__card2:hover .circle2 {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color2);
+}
+
+.instruction__card2:hover .circle2:after {
+    background: var(--bg-color-light);
+}
+
+.instruction__card2:hover p {
+    color: var(--text-color-hover);
+}
+
+.instruction__card2:hover h5 {
+    color: var(--text-color-hover) !important;
+}
+
+.instruction__card2 h5 {
+    color: #002248;
+    font-size: 20px;
+    margin-top: 30px;
+    z-index: 1000;
+    font-family: 'air';
+    font-weight: 400;
+    transition: color 0.3s ease-out;
+}
+
+.instruction__card2 p {
+    font-size: 17px;
+    color: #4c5656;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+}
+
+.circle2 {
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circle2:after {
+    content: "";
+    width: 118px;
+    height: 118px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color2);
+    border-radius: 50%;
+    transition: opacity 0.3s ease-out;
+}
+
+.circle2 img {
+    width: 100px;
+    z-index: 10000;
+    transform: translateZ(0);
+    margin-bottom: 12px;
+    margin-right: 10px;
+}
+
+.instruction__overlay2 {
+    width: 118px;
+    position: absolute;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color2);
+    top: 25px;
+    left: 125px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+/* instruction card 2*/
+
+/* instruction card 3 */
+
+.instruction__card3 {
+    width: 370px;
+    height: 321px;
+    background: #fff;
+    border: 2px solid #bdbdbd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+}
+
+.instruction__card3:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+        0 24px 46px var(--box-shadow-color);
+    cursor: pointer;
+}
+
+.instruction__card3:hover .instruction__overlay3 {
+    transform: scale(4) translateZ(0);
+    height: 170px;
+}
+
+.instruction__card3:hover .circle3 {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color3);
+}
+
+.instruction__card3:hover .circle3:after {
+    background: var(--bg-color-light);
+}
+
+.instruction__card3:hover p {
+    color: var(--text-color-hover);
+}
+.instruction__card3:hover h5 {
+    color: var(--text-color-hover) !important;
+}
+
+.instruction__card3 h5 {
+    color: #002248;
+    font-size: 20px;
+    margin-top: 30px;
+    z-index: 1000;
+    font-family: 'air';
+    font-weight: 400;
+    transition: color 0.3s ease-out;
+}
+
+.instruction__card3 p {
+    font-size: 17px;
+    color: #4c5656;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+}
+
+.circle3 {
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circle3:after {
+    content: "";
+    width: 118px;
+    height: 118px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color3);
+    border-radius: 50%;
+    transition: opacity 0.3s ease-out;
+}
+
+.circle3 img {
+    width: 100px;
+    z-index: 10000;
+    transform: translateZ(0);
+    margin-bottom: 12px;
+    margin-right: 10px;
+}
+
+.instruction__overlay3 {
+    width: 118px;
+    position: absolute;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color3);
+    top: 25px;
+    left: 125px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+/* instruction card 3*/
+
+
+/* Media */
+@media (max-width: 380px) {
+    .instruction__overlay{
+        left: 115px;
+    }
+
+    .instruction__overlay2{
+        left: 115px;
+    }
+
+    .instruction__overlay3{
+        left: 115px;
+    }
+}
+
+@media (max-width: 360px) {
+    .instruction__overlay{
+        left: 105px;
+    }
+
+    .instruction__overlay2{
+        left: 105px;
+    }
+
+    .instruction__overlay3{
+        left: 105px;
+    }
+}
+
+@media (max-width: 340px) {
+    .instruction__overlay{
+        left: 95px;
+    }
+
+    .instruction__overlay2{
+        left: 95px;
+    }
+
+    .instruction__overlay3{
+        left: 95px;
+    }
+}
